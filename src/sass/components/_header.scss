@@ -1,0 +1,16 @@
+// Header component on the front page
+header {
+    background-color: $clr-black;
+    background-size: cover;
+    color: $clr-white;
+    min-height: 66%;
+    padding: 0.5em;
+    text-align: center;
+
+    @include media($desktop) {
+        display: flex;
+        flex-direction: row;
+        padding: 2.0em;
+        text-align: left;
+    }
+}
