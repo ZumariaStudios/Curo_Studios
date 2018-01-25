@@ -6,16 +6,53 @@ main {
 }
 
 .content {
-    margin: 0 auto;
-    max-width: $desktop-width;
+  margin: 0 auto;
+  max-width: $desktop-width;
+  font-family: $sanserif;
 
-    h2 {
-        text-align: left;
+  .main_content {
+    font-family: $sanserif;
 
+    .about_us_img {
+      background-image: url("img/about_us_img.jpg");
+      background-size: cover;
+      // position: relative;
+      }
+
+    .text_block {
+      // margin-top: auto;
+      // display: inline;
+      background-color: $clr-white;
+      width: 700px;
+      padding: 20px;
+      margin: 10px;
+      margin-top: 70px;
+      margin-bottom: 30px;
+      // position: absolute;
+
+      #title {
+        color: $clr-ultra-violet;
+        font-size: 32px;
+      }
+
+      #subtitle {
+        margin-top: -20px;
+        font-size: 16px;
+        color: $clr-ultra-violet;
+      }
+
+      #para {
+        margin-top: -10px;
+        font-size: 12px;
+        color: $clr-gray-40;
+        line-height: 20px;
+      }
+    }
+  }
+// example
         @include media($desktop) {
             text-align: center;
         }
-    }
 
     h1,
     h2,
@@ -23,6 +60,7 @@ main {
     h4,
     h5,
     h6 {
-        color: $clr-highlight-alt;
+        color: $clr-gray-40;
+        font-family: $sanserif;
     }
 }
