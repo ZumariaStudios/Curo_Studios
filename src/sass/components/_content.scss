@@ -1,34 +1,145 @@
 main {
     background: $clr-gray-95;
     color: $clr-gray-15;
-    padding: 1.0em;
+    // padding: 1.0em;
     padding-bottom: 3.0em;
 }
 
 .content {
-  margin: 0 auto;
+  // margin: 0 auto;
   max-width: $desktop-width;
   font-family: $sanserif;
 
   .main_content {
     font-family: $sanserif;
 
+    .top_img {
+      background-image: url("img/top_img.jpg");
+      background-size: cover;
+      width: 100vw;
+      height: 25em;
+    }
+
     .about_us_img {
       background-image: url("img/about_us_img.jpg");
       background-size: cover;
-      // position: relative;
+      width: 100vw;
+      height: 25em;
       }
 
+      #about{
+        margin-top: 200px;
+
+        .text_block{
+          position: absolute;
+          // top:115%;
+          top:55em;
+          left: 8%;
+          padding: 20px;
+          box-shadow: -1px 2px 2px rgba(95,75,139,.7);
+
+          @media (max-width: 768px){
+            top:15%;
+          }
+        }
+      }
+
+      .our_mission_img {
+        background-image: url("img/our_mission_img.png");
+        background-size: cover;
+        width: 100vw;
+        height: 25em;
+      }
+
+      #mission{
+        margin-top: 150px;
+
+        .text_block{
+          position: absolute;
+          // top:178%;
+          top: 78em;
+          left: 35%;
+          padding: 20px;
+          box-shadow: -1px 2px 2px rgba(95,75,139,.7);
+
+          @media (max-width: 768px){
+            top:15%;
+          }
+        }
+      }
+
+      .services_img {
+        background-image: url("img/services_img.png");
+        background-size: cover;
+        width: 100vw;
+        height: 25em;
+      }
+
+      #services{
+
+        @mixin serv_small_txt {
+          background-color: $clr-ultra-violet;
+          padding: 15px;
+          height: 220px;
+        }
+
+        margin-top: 150px;
+
+        .text_block{
+          position: absolute;
+          // top:230%;
+          top: 110em;
+          left: 15%;
+          padding: 20px;
+          box-shadow: -1px 2px 2px rgba(95,75,139,.7);
+          height: 25%;
+          width: 70%;
+
+          @media (max-width: 768px){
+            top:15%;
+          }
+        }
+
+        .sub_services{
+          max-width: $desktop-width;
+          margin-top: -10px;
+          font-size: 12px;
+          color: $clr-pure-white;
+          line-height: 20px;
+
+          #serv_title {
+            color: $clr-pure-white;
+            font-size: 18px;
+          }
+
+          #left_txt {
+            @include span-columns(4);
+            @include serv_small_txt;
+            float: left;
+          }
+
+          #center_txt {
+            @include span-columns(4);
+            @include serv_small_txt;
+          }
+
+          #right_txt {
+            @include span-columns(4);
+            @include serv_small_txt;
+            float: right;
+          }
+        }
+      }
+
+
     .text_block {
-      // margin-top: auto;
-      // display: inline;
       background-color: $clr-white;
       width: 700px;
-      padding: 20px;
-      margin: 10px;
-      margin-top: 70px;
-      margin-bottom: 30px;
-      // position: absolute;
+      // height: 25%;
+
+      @media (max-width: 768px){
+        width: 85%;
+      }
 
       #title {
         color: $clr-ultra-violet;
@@ -49,6 +160,7 @@ main {
       }
     }
   }
+
 // example
         @include media($desktop) {
             text-align: center;
