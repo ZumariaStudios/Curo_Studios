@@ -63,3 +63,6 @@ src/_includes/styles*
 .sass-cache
 .jekyll-metadata
 .DS_Store
+
+src/fonts/fontawesome*
+src/fonts/FontAwesome*

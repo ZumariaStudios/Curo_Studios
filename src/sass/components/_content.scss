@@ -5,6 +5,10 @@ main {
     padding-bottom: 3.0em;
 }
 
+body {
+  position: relative; // Hold so that footer can use aboslute positioning 
+}
+
 .content {
   margin: 0 auto;
   max-width: $desktop-width;
