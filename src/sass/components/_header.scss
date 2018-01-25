@@ -1,11 +1,50 @@
 // Header component on the front page
 header {
-    background-color: $clr-black;
-    background-size: cover;
-    color: $clr-white;
-    min-height: 10%;
-    padding: 0.5em;
-    text-align: center;
+    background-color: $clr-white;
+    width: 100%;
+
+    .wrapper {
+      height: 81px;
+      display: flex;
+      width: 100%;
+      position: fixed;
+      margin-top: 0px;
+      margin-left: 0px;
+      font-family: $sanserif;
+      background-color: $clr-white;
+    }
+
+    .logo {
+      @include span-columns(12)
+      color: $clr-ultra-violet;
+      float: left;
+      margin-bottom: auto;
+      font-size: 22px;
+      margin-left: 40px;
+    }
+
+    .in_touch {
+      @include span-columns(3)
+      float: right;
+      padding-top: 24px;
+      font-size: 16px;
+      margin-right: 50px;
+
+      a:link {
+        color: $clr-gray-15;
+        text-decoration: none;
+
+      }
+      a:hover {
+        color: $clr-gray-40;
+      }
+
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%
+      }
+}
 
     // .header_text {
     //   background-color: white;
