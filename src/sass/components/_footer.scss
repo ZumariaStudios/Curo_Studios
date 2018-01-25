@@ -3,8 +3,7 @@ footer {
     background: white;
     text-align: center;
     height: auto;
-    position: absolute; // To keep footer
-    bottom: 0; //          flush with the bottom of the page
+    bottom: 0;  // To keep footer flush with the bottom of the page
     width: 100%;
 
 a {
@@ -33,6 +32,7 @@ a {
 
     #top_third {
       background-color: rgb(175, 163, 200);
+      // margin-top: 2em;
       // box-shadow: 0px 0 15px 10px rgb(175, 163, 200);//Creates gradient effect
 
     }
