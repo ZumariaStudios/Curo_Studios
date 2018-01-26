@@ -6,7 +6,11 @@ cache:
 
 before_script:
     - apt-get update -qy
-    - apt-get install -y nodejs npm
+    - apt-get install bzip2 curl libfontconfig -qy
+    - curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+    - export NVM_DIR="$HOME/.nvm"
+    - . "$NVM_DIR/nvm.sh" # This loads nvm
+    - nvm install v8.5.0
     - gem install jekyll bundler
     - npm install
     - jekyll --version
