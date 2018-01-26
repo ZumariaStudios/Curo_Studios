@@ -4,6 +4,8 @@
   "description": "Website for www.curostudio.com",
   "scripts": {
     "jekyll": "jekyll build --incremental --source src --destination build",
+    "copyfa": "copyfiles -f node_modules/font-awesome/fonts/* src/fonts",
+    "presass": "npm run copyfa",
     "sass": "node-sass --source-map true --include-path src/sass --include-path node_modules src/sass/main.scss src/styles/bundle.css",
     "postsass": "postcss src/styles/bundle.css -c postcss.config.js -o src/_includes/styles.min.css",
     "server:dev": "babel-node tools/runBrowserSync.js",
@@ -36,7 +38,9 @@
     "bourbon-neat": "^1.9.0",
     "browser-sync": "^2.23.5",
     "copy-dir": "^0.3.0",
+    "copyfiles": "^1.2.0",
     "cssnano": "^3.10.0",
+    "font-awesome": "^4.7.0",
     "mkdirp": "^0.5.1",
     "moment": "^2.20.1",
     "node-sass": "^4.7.2",

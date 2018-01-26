@@ -4,7 +4,7 @@
 @import 'normalize.css/normalize';
 @import 'bourbon/core/bourbon';
 @import 'bourbon-neat/app/assets/stylesheets/neat';
-
+@import 'font-awesome/scss/font-awesome';
 
 // Defaults
 @import 'defaults/breakpoints';
@@ -17,6 +17,7 @@
 @import 'components/content';
 @import 'components/footer';
 @import 'components/header';
+@import 'components/corporate_partners';
 
 
 // Pages
