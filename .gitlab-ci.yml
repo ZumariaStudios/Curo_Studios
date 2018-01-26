@@ -6,8 +6,11 @@ cache:
 
 before_script:
     - apt-get update -qy
+    - apt-get install nodejs
+    - apt-get install npm
     - gem install jekyll bundler
     - npm install
+    - jekyll --version
     - node --version
     - npm --version
 
