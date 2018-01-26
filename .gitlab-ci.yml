@@ -6,9 +6,10 @@ cache:
 
 before_script:
     - apt-get update -qy
-    - apt-get install -y npm
-    - bundle install
+    - gem install jekyll bundler
     - npm install
+    - node --version
+    - npm --version
 
 pages:
     stage: deploy
