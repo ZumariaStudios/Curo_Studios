@@ -1,34 +1,33 @@
 // Header component on the front page
 header {
+  position: fixed;
+  top: 0;
     background-color: $clr-white;
     width: 100%;
+    z-index: 1;
+    box-shadow: -1px 2px 2px rgba(95,75,139,.7);
 
     .wrapper {
-      height: 81px;
-      display: flex;
+      display: inline-flex;
       width: 100%;
-      position: fixed;
-      margin-top: 0px;
-      margin-left: 0px;
+      margin: 0;
       font-family: $sanserif;
       background-color: $clr-white;
     }
 
     .logo {
-      @include span-columns(12)
-      color: $client-purple;
+      @include span-columns(10)
+      color: $clr-ultra-violet;
       float: left;
-      margin-bottom: auto;
+      margin: 0 0 auto 40px;
       font-size: 22px;
-      margin-left: 40px;
     }
 
     .in_touch {
-      @include span-columns(3)
-      float: right;
+
+      display: block;
       padding-top: 24px;
       font-size: 16px;
-      margin-right: 50px;
 
       a:link {
         color: $clr-gray-15;
@@ -56,7 +55,7 @@ header {
     @include media($desktop) {
         display: flex;
         flex-direction: row;
-        padding: 2.0em;
+        // padding: 2.0em;
         text-align: left;
     }
 }
