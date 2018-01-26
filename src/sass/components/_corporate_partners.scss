@@ -1,9 +1,14 @@
 .corporate_partners {
-
   padding: 1.5em;
 
+  h2 {
+    margin-top: 0;
+    text-align: center; //Aligns "Our Corporate Partners"
+    color: #A7C796;
+  }
 
-  .corporate_partner_logos { //Handles arranging of the SVG logos
+  .corporate_partner_logos {
+    //Handles arranging of the SVG logos
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -13,17 +18,9 @@
     SVG {
       // Handles Corporate Partner SVG Logos
       margin: 0.5em;
-      width: 200px;
-      height: 200px;
-      color:$client-purple;
-
+      width: 6em;
+      height: 6em;
+      fill: $clr-ultra-violet;
     }
-  }
-
-  h2 {
-
-    margin-top: 0;
-    text-align: center; //Aligns "Our Corporate Partners"
-    color: white;
   }
 }
