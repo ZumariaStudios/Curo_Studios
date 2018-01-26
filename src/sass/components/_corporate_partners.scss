@@ -1,22 +1,29 @@
 .corporate_partners {
-    padding: 1.5em;
 
-    .corporate_partner_logos{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  padding: 1.5em;
 
-    .corporate_partner_logo {
-        img { // Handles Corporate Partner Logos
-            margin: 0.5em;
-            width: 200px;
-            height: 200px;
-        }
-    }
 
-    h2 {
-        margin-top: 0;
-        text-align: center; //Aligns "Our Corporate Partners"
+  .corporate_partner_logos { //Handles arranging of the SVG logos
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .corporate_partner_logo {
+    SVG {
+      // Handles Corporate Partner SVG Logos
+      margin: 0.5em;
+      width: 200px;
+      height: 200px;
+      color:$client-purple;
+
     }
+  }
+
+  h2 {
+
+    margin-top: 0;
+    text-align: center; //Aligns "Our Corporate Partners"
+    color: white;
+  }
 }
