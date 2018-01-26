@@ -1,0 +1,21 @@
+image: ruby:2.4.1
+
+cache:
+    paths:
+        - node_modules/
+
+before_script:
+    - apt-get update -qy
+    - apt-get instal -y npm
+    - bundle install
+    - npm install
+
+pages:
+    stage: deploy
+    script:
+        - npm run deploy
+    artifacts:
+        paths:
+            - public
+    only:
+        - master
