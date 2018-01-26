@@ -6,7 +6,7 @@ cache:
 
 before_script:
     - apt-get update -qy
-    - apt-get instal -y npm
+    - apt-get install -y npm
     - bundle install
     - npm install
 
