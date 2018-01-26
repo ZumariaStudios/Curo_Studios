@@ -4,6 +4,10 @@ main {
     padding-bottom: 3.0em;
 }
 
+body {
+  position: relative; // Hold so that footer can use aboslute positioning
+}
+
 .content {
     font-family: $sanserif;
 

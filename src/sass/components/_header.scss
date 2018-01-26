@@ -45,6 +45,13 @@ header {
       }
 }
 
+    // .header_text {
+    //   background-color: white;
+    //   color: red;
+    //   text-align: center;
+    //
+    // }
+
     @include media($desktop) {
         display: flex;
         flex-direction: row;
