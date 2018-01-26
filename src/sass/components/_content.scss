@@ -16,17 +16,19 @@ body {
         width: 100%;
 
         .top_img {
-            background-image: url("img/top_img.jpg");
+            background-image: url("img/top_image_small.jpg");
             background-size: cover;
+            background-repeat: no-repeat;
             width: 100vw;
-            height: 25em;
+            height: 22em;
+            // height: 100%;
             top: 0;
         }
 
         .nav_icons {
             width: inherit;
-            padding-top: 70px;
-            padding-bottom: 70px;
+            padding-top: 20px;
+            padding-bottom: 20px;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -47,8 +49,9 @@ body {
         }
 
         .about_us_img {
-            background-image: url("img/about_us_img.jpg");
-            background-size: cover;
+            background-image: url("img/about_img.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
             width: 100vw;
             height: 25em;
         }
@@ -57,7 +60,7 @@ body {
 
             .text_block {
                 position: absolute;
-                top: 54em;
+                top: 41em;
                 left: 8%;
                 padding: 20px;
                 box-shadow: -1px 2px 2px rgba(95,75,139,.7);
@@ -72,8 +75,9 @@ body {
                 transparentize($clr-ultra-violet, 0.75),
                 transparentize(darken($clr-ultra-violet, 35%), 0.75)
                 ), url("img/our_mission_img.png");*/
-            background-image: url("img/our_mission_img.png");
-            background-size: cover;
+            background-image: url("img/mission_img.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
             width: 100vw;
             height: 25em;
         }
@@ -83,7 +87,7 @@ body {
 
             .text_block {
                 position: absolute;
-                top: 82em;
+                top: 70em;
                 left: 35%;
                 padding: 20px;
                 box-shadow: -1px 2px 2px rgba(95,75,139,.7);
@@ -94,8 +98,9 @@ body {
         }
 
         .services_img {
-            background-image: url("img/services_img.png");
-            background-size: cover;
+            background-image: url("img/services_img.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
             width: 100vw;
             height: 25em;
         }
@@ -147,7 +152,7 @@ body {
 
         .text_block {
             background-color: $clr-white;
-            width: 700px;
+            width: 50%;
             @media (max-width: 768px) {
                 width: 85%;
             }
