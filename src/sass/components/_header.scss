@@ -16,7 +16,7 @@ header {
 
     .logo {
       @include span-columns(12)
-      color: $clr-ultra-violet;
+      color: $client-purple;
       float: left;
       margin-bottom: auto;
       font-size: 22px;

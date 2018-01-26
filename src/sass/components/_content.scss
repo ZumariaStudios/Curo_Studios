@@ -6,7 +6,7 @@ main {
 }
 
 body {
-  position: relative; // Hold so that footer can use aboslute positioning 
+  position: relative; // Hold so that footer can use aboslute positioning
 }
 
 .content {
@@ -35,14 +35,14 @@ body {
       // position: absolute;
 
       #title {
-        color: $clr-ultra-violet;
+        color: $client-purple;
         font-size: 32px;
       }
 
       #subtitle {
         margin-top: -20px;
         font-size: 16px;
-        color: $clr-ultra-violet;
+        color: $client-purple;
       }
 
       #para {
