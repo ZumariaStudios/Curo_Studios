@@ -1,23 +1,22 @@
-#corporate_partners {
+.corporate_partners {
+    padding: 1.5em;
 
-.corporate_partner_logos{
+    .corporate_partner_logos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-  width: 70%;
-  margin: auto;
-}
-    img { // Handles Corporate Partner Logos
-      float:left;
-      display: inline-block;
-      margin:auto;
-      padding: .5em;
-      text-align: center;
-      max-width: 200px;
-      max-height: 200px;
-
+    .corporate_partner_logo {
+        img { // Handles Corporate Partner Logos
+            margin: 0.5em;
+            width: 200px;
+            height: 200px;
+        }
     }
 
     h2 {
-      text-align: center; //Aligns "Our Corporate Partners"
-
+        margin-top: 0;
+        text-align: center; //Aligns "Our Corporate Partners"
     }
 }
