@@ -16,7 +16,7 @@ header {
     }
 
     .logo {
-      @include span-columns(12)
+      @include span-columns(10)
       color: $clr-ultra-violet;
       float: left;
       margin: 0 0 auto 40px;
@@ -24,13 +24,10 @@ header {
     }
 
     .in_touch {
-      @include span-columns(2)
-      width: 23%;
-      float: right;
+
       display: block;
       padding-top: 24px;
       font-size: 16px;
-      // margin-right: 50px;
 
       a:link {
         color: $clr-gray-15;

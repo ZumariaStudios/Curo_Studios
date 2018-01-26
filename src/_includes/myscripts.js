@@ -1,16 +1,11 @@
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
-
-// Get the header
-var header = document.getElementById("myHeader");
-
-// Get the offset position of the navbar
-var sticky = header.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
+$(document).ready(function() {
+$('.nav_scroll').click(function(event) {
+    var id = $(this).attr("href");
+    // var offset = 70;
+    var target = $(id).offset().top - 30;
+    $('html, body').animate({
+      scrollTop: target
+    }, 800);
+    event.preventDefault();
+  });
+});

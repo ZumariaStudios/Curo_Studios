@@ -1,23 +1,44 @@
 main {
     background: $clr-gray-95;
     color: $clr-gray-15;
-    // padding: 1.0em;
     padding-bottom: 3.0em;
 }
 
 .content {
-  // margin: 0 auto;
   max-width: $desktop-width;
   font-family: $sanserif;
 
   .main_content {
     font-family: $sanserif;
+    width: 100%;
 
     .top_img {
       background-image: url("img/top_img.jpg");
       background-size: cover;
       width: 100vw;
       height: 25em;
+      top: 0;
+    }
+
+    .nav_icons {
+      width: inherit;
+      padding-top: 70px;
+      padding-bottom: 70px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .icon {
+        svg {
+          height: 118px;
+        }
+      }
+
+      .icon_text{
+        color: $clr-ultra-violet;
+        margin: 0;
+      }
     }
 
     .about_us_img {
@@ -27,13 +48,11 @@ main {
       height: 25em;
       }
 
-      #about{
-        margin-top: 200px;
+      .about{
 
         .text_block{
           position: absolute;
-          // top:115%;
-          top:55em;
+          top:54em;
           left: 8%;
           padding: 20px;
           box-shadow: -1px 2px 2px rgba(95,75,139,.7);
@@ -51,13 +70,12 @@ main {
         height: 25em;
       }
 
-      #mission{
+      .mission{
         margin-top: 150px;
 
         .text_block{
           position: absolute;
-          // top:178%;
-          top: 78em;
+          top: 82em;
           left: 35%;
           padding: 20px;
           box-shadow: -1px 2px 2px rgba(95,75,139,.7);
@@ -75,20 +93,14 @@ main {
         height: 25em;
       }
 
-      #services{
-
-        @mixin serv_small_txt {
-          background-color: $clr-ultra-violet;
-          padding: 15px;
-          height: 220px;
-        }
+      .services{
 
         margin-top: 150px;
 
         .text_block{
           position: absolute;
           // top:230%;
-          top: 110em;
+          top: 105em;
           left: 15%;
           padding: 20px;
           box-shadow: -1px 2px 2px rgba(95,75,139,.7);
@@ -101,32 +113,30 @@ main {
         }
 
         .sub_services{
-          max-width: $desktop-width;
+          // max-width: $desktop-width;
           margin-top: -10px;
-          font-size: 12px;
-          color: $clr-pure-white;
           line-height: 20px;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
 
-          #serv_title {
+          .serv_small_txt {
+            background-color: $clr-ultra-violet;
+            padding: 15px;
+            height: 220px;
+            width: 220px;
+            margin: 5px;
+          }
+
+          .serv_title {
             color: $clr-pure-white;
             font-size: 18px;
           }
 
-          #left_txt {
-            @include span-columns(4);
-            @include serv_small_txt;
-            float: left;
-          }
-
-          #center_txt {
-            @include span-columns(4);
-            @include serv_small_txt;
-          }
-
-          #right_txt {
-            @include span-columns(4);
-            @include serv_small_txt;
-            float: right;
+          .serv_para {
+            font-size: 12px;
+            color: $clr-pure-white;
           }
         }
       }
@@ -135,24 +145,23 @@ main {
     .text_block {
       background-color: $clr-white;
       width: 700px;
-      // height: 25%;
 
       @media (max-width: 768px){
         width: 85%;
       }
 
-      #title {
+      .title {
         color: $clr-ultra-violet;
         font-size: 32px;
       }
 
-      #subtitle {
+      .subtitle {
         margin-top: -20px;
         font-size: 16px;
         color: $clr-ultra-violet;
       }
 
-      #para {
+      .para {
         margin-top: -10px;
         font-size: 12px;
         color: $clr-gray-40;
