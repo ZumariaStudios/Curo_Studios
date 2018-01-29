@@ -17,8 +17,9 @@
     "prestart": "npm run build",
     "start": "npm-run-all --parallel server:dev watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "npm-run-all build version sync2s3",
-    "sync2s3": "npm run tools/sync2s3.js",
+    "deploy": "npm-run-all build version",
+    "postdeploy": "sync2s3",
+    "sync2s3": "node tools/sync2s3.js",
     "version": "node tools/writeVersionTxt.js"
   },
   "author": "Mile Two <www.miletwo.us>",
