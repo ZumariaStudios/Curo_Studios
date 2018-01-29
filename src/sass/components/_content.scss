@@ -28,7 +28,7 @@ $gradient-transparency: 0.27;
                 transparentize($client-green, $gradient-transparency) 50%,
                 rgba(0, 0, 0, 0) 50%,
                 rgba(0, 0, 0, 0) 100%),
-                url('img/nastuh-abootalebi-284882.jpg') no-repeat;
+                url('img/nastuh-abootalebi-284882.jpg') center center no-repeat;
             background-size: cover;
             background-repeat: no-repeat;
             width: 100vw;
@@ -66,7 +66,7 @@ $gradient-transparency: 0.27;
                 to bottom,
                 transparentize(darken($clr-ultra-violet, 20%), $gradient-transparency) 0%,
                 transparentize(darken($clr-ultra-violet, 20%), $gradient-transparency) 100%
-                ), url('img/rawpixel-com-196464.jpg') no-repeat;
+                ), url('img/rawpixel-com-196464.jpg') top center no-repeat;
             background-size: cover;
             background-repeat: no-repeat;
             width: 100vw;
@@ -99,7 +99,7 @@ $gradient-transparency: 0.27;
                 rgba(0, 0, 0, 0) 66%,
                 transparentize($client-green, $gradient-transparency) 66%,
                 transparentize($client-green, $gradient-transparency) 100%
-                ), url('img/capitol-standard-101748.jpg') no-repeat;
+                ), url('img/capitol-standard-101748.jpg') center center no-repeat;
             background-size: cover;
             background-repeat: no-repeat;
             width: 100vw;
@@ -126,7 +126,7 @@ $gradient-transparency: 0.27;
             background: linear-gradient(
                 transparentize($client-green, $gradient-transparency) 0%,
                 transparentize($client-green, $gradient-transparency) 100%
-                ), url('img/artem-sapegin-176819.jpg') no-repeat;
+                ), url('img/lukas-blazek-367945.jpg') center center no-repeat;
             background-size: cover;
             background-repeat: no-repeat;
             width: 100vw;
