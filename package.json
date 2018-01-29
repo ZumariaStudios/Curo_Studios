@@ -17,9 +17,8 @@
     "prestart": "npm run build",
     "start": "npm-run-all --parallel server:dev watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "npm-run-all build version mkpublic",
-    "premkpublic": "rimraf public",
-    "mkpublic": "mkdir public && cp -R build/* public",
+    "deploy": "npm-run-all build version sync2s3",
+    "sync2s3": "npm run tools/sync2s3.js",
     "version": "node tools/writeVersionTxt.js"
   },
   "author": "Mile Two <www.miletwo.us>",
@@ -33,6 +32,7 @@
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^7.2.5",
+    "aws-sdk": "^2.188.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -44,6 +44,7 @@
     "copyfiles": "^1.2.0",
     "cssnano": "^3.10.0",
     "font-awesome": "^4.7.0",
+    "mime": "^2.2.0",
     "mkdirp": "^0.5.1",
     "moment": "^2.20.1",
     "node-sass": "^4.7.2",

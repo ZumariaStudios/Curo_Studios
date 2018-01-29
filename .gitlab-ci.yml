@@ -17,12 +17,10 @@ before_script:
     - node --version
     - npm --version
 
-pages:
+deploy-to-production:
     stage: deploy
+    environment: production
     script:
-        - npm run deploy
-    artifacts:
-        paths:
-            - public
+    - npm run deploy
     only:
-        - master
+    - master
