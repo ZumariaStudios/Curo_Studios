@@ -8,6 +8,8 @@ body {
   position: relative; // Hold so that footer can use aboslute positioning
 }
 
+
+$gradient-transparency: 0.27;
 .content {
     font-family: $sanserif;
 
@@ -16,7 +18,17 @@ body {
         width: 100%;
 
         .top_img {
-            background-image: url("img/top_image_small.jpg");
+            //background-image: url("img/top_image_small.jpg");
+            //background-image: url('img/nastuh-abootalebi-284882.jpg');
+            background: linear-gradient(
+                120deg,
+                transparentize($clr-ultra-violet, $gradient-transparency) 0%,
+                transparentize($clr-ultra-violet, $gradient-transparency) 33%,
+                transparentize($client-green, $gradient-transparency) 33%,
+                transparentize($client-green, $gradient-transparency) 50%,
+                rgba(0, 0, 0, 0) 50%,
+                rgba(0, 0, 0, 0) 100%),
+                url('img/nastuh-abootalebi-284882.jpg') no-repeat;
             background-size: cover;
             background-repeat: no-repeat;
             width: 100vw;
@@ -49,8 +61,13 @@ body {
         }
 
         .about_us_img {
-            background-image: url("img/about_img.jpg");
-            background-size: contain;
+            //background-image: url("img/rawpixel-com-196464.jpg");
+            background: linear-gradient(
+                to bottom,
+                transparentize(darken($clr-ultra-violet, 20%), $gradient-transparency) 0%,
+                transparentize(darken($clr-ultra-violet, 20%), $gradient-transparency) 100%
+                ), url('img/rawpixel-com-196464.jpg') no-repeat;
+            background-size: cover;
             background-repeat: no-repeat;
             width: 100vw;
             height: 25em;
@@ -75,8 +92,15 @@ body {
                 transparentize($clr-ultra-violet, 0.75),
                 transparentize(darken($clr-ultra-violet, 35%), 0.75)
                 ), url("img/our_mission_img.png");*/
-            background-image: url("img/mission_img.jpg");
-            background-size: contain;
+            //background-image: url("img/mission_img.jpg");
+            background: linear-gradient(
+                120deg,
+                rgba(0, 0, 0, 0) 0%,
+                rgba(0, 0, 0, 0) 66%,
+                transparentize($client-green, $gradient-transparency) 66%,
+                transparentize($client-green, $gradient-transparency) 100%
+                ), url('img/capitol-standard-101748.jpg') no-repeat;
+            background-size: cover;
             background-repeat: no-repeat;
             width: 100vw;
             height: 25em;
@@ -98,8 +122,12 @@ body {
         }
 
         .services_img {
-            background-image: url("img/services_img.jpg");
-            background-size: contain;
+            //background-image: url("img/services_img.jpg");
+            background: linear-gradient(
+                transparentize($client-green, $gradient-transparency) 0%,
+                transparentize($client-green, $gradient-transparency) 100%
+                ), url('img/artem-sapegin-176819.jpg') no-repeat;
+            background-size: cover;
             background-repeat: no-repeat;
             width: 100vw;
             height: 25em;
