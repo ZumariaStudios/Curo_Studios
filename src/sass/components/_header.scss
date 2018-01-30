@@ -33,7 +33,7 @@ header {
         }
 
         a:hover {
-            color: $clr-gray-40;
+            color: lighten($clr-ultra-violet, 15%);
         }
     }
 

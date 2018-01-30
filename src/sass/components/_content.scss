@@ -72,6 +72,10 @@ $section-padding: 2.0em;
                 text-align: center;
                 text-decoration: none;
 
+                @include media($tablet) {
+                    margin: 1.0em;
+                }
+
                 @include media($desktop) {
                     margin: 2.5em;
                 }
@@ -80,6 +84,11 @@ $section-padding: 2.0em;
                 svg {
                     height: $icon-size;
                     width: $icon-size;
+
+                    @include media($tablet) {
+                        height: $icon-size * 2;
+                        width: $icon-size * 2;
+                    }
 
                     @include media($desktop) {
                         height: $icon-size * 3;
@@ -93,6 +102,10 @@ $section-padding: 2.0em;
                 font-size: 16px;
                 margin: 0;
                 text-align: center;
+
+                @include media($tablet) {
+                    font-size: 20px;
+                }
 
                 @include media($desktop) {
                     font-size: 24px;
