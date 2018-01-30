@@ -17,8 +17,12 @@ footer {
     }
 
     .fa {
-      font-size: 64px;
+      font-size: 32px;
       color: white;
       margin: 0 0.25em;
+
+      @include media($desktop) {
+          font-size: 64px;
+      }
     }
 }
