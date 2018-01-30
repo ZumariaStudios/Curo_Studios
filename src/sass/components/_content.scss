@@ -47,8 +47,8 @@ $section-padding: 2.0em;
               transparentize($clr-ultra-violet, $gradient-transparency) 33%,
               transparentize($client-green, $gradient-transparency) 33%,
               transparentize($client-green, $gradient-transparency) 50%,
-              rgba(0, 0, 0, 0) 50%,
-              rgba(0, 0, 0, 0) 100%),
+              rgba(0, 0, 0, .2) 50%,
+              rgba(0, 0, 0, .2) 100%),
               url($imagePath);
         }
 
