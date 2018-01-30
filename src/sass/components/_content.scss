@@ -10,6 +10,30 @@ body {
 
 
 $gradient-transparency: 0.27;
+$section-padding: 2.0em;
+
+.front-section {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: $section-padding 0;
+    padding: 3.0em;
+
+    @include media($desktop) {
+        margin: $section-padding*2 0;
+    }
+
+    .text_block {
+        padding: $section-padding;
+        box-shadow: -1px 2px 2px rgba(95,75,139,.7);
+        width: 100%;
+
+        @include media($desktop) {
+            width: 67%;
+        }
+    }
+}
+
 .content {
     font-family: $sanserif;
 
@@ -18,8 +42,7 @@ $gradient-transparency: 0.27;
         width: 100%;
 
         .top_img {
-            //background-image: url("img/top_image_small.jpg");
-            //background-image: url('img/nastuh-abootalebi-284882.jpg');
+            background-color: $clr-ultra-violet;
             background: linear-gradient(
                 120deg,
                 transparentize($clr-ultra-violet, $gradient-transparency) 0%,
@@ -32,121 +55,87 @@ $gradient-transparency: 0.27;
             background-size: cover;
             background-repeat: no-repeat;
             width: 100vw;
-            height: 22em;
-            // height: 100%;
-            top: 0;
+            height: 350px;
         }
 
         .nav_icons {
-            width: inherit;
-            padding-top: 20px;
-            padding-bottom: 20px;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
+            padding: $section-padding;
+            padding-bottom: 0;
 
             .icon {
+                display: block;
+                margin: 0.5em;
+                text-align: center;
                 text-decoration: none;
 
+                @include media($desktop) {
+                    margin: 2.5em;
+                }
+
+                $icon-size: 32px;
                 svg {
-                    height: 118px;
+                    height: $icon-size;
+                    width: $icon-size;
+
+                    @include media($desktop) {
+                        height: $icon-size * 3;
+                        width: $icon-size * 3;
+                    }
                 }
             }
 
             .icon_text {
                 color: $clr-ultra-violet;
+                font-size: 16px;
                 margin: 0;
-            }
-        }
+                text-align: center;
 
-        .about_us_img {
-            //background-image: url("img/rawpixel-com-196464.jpg");
-            background: linear-gradient(
-                to bottom,
-                transparentize(darken($clr-ultra-violet, 20%), $gradient-transparency) 0%,
-                transparentize(darken($clr-ultra-violet, 20%), $gradient-transparency) 100%
-                ), url('img/rawpixel-com-196464.jpg') top center no-repeat;
-            background-size: cover;
-            background-repeat: no-repeat;
-            width: 100vw;
-            height: 25em;
-        }
-
-        .about {
-
-            .text_block {
-                position: absolute;
-                top: 41em;
-                left: 8%;
-                padding: 20px;
-                box-shadow: -1px 2px 2px rgba(95,75,139,.7);
-                @media (max-width: 768px) {
-                    top: 15%;
+                @include media($desktop) {
+                    font-size: 24px;
                 }
             }
         }
 
-        .our_mission_img {
-            /*background-image: linear-gradient(
-                transparentize($clr-ultra-violet, 0.75),
-                transparentize(darken($clr-ultra-violet, 35%), 0.75)
-                ), url("img/our_mission_img.png");*/
-            //background-image: url("img/mission_img.jpg");
-            background: linear-gradient(
+        .about {
+            @extend .front-section;
+
+            background-image: linear-gradient(
+                to bottom,
+                transparentize(darken($clr-ultra-violet, 20%), $gradient-transparency) 0%,
+                transparentize(darken($clr-ultra-violet, 20%), $gradient-transparency) 100%
+                ), url('img/rawpixel-com-196464.jpg');
+        }
+
+        .mission {
+            @extend .front-section;
+            display: flex;
+            flex-direction: row-reverse;
+
+            background-image: linear-gradient(
                 120deg,
                 rgba(0, 0, 0, 0) 0%,
                 rgba(0, 0, 0, 0) 66%,
                 transparentize($client-green, $gradient-transparency) 66%,
                 transparentize($client-green, $gradient-transparency) 100%
-                ), url('img/capitol-standard-101748.jpg') center center no-repeat;
-            background-size: cover;
-            background-repeat: no-repeat;
-            width: 100vw;
-            height: 25em;
-        }
-
-        .mission {
-            margin-top: 150px;
-
-            .text_block {
-                position: absolute;
-                top: 70em;
-                left: 35%;
-                padding: 20px;
-                box-shadow: -1px 2px 2px rgba(95,75,139,.7);
-                @media (max-width: 768px) {
-                    top: 15%;
-                }
-            }
-        }
-
-        .services_img {
-            //background-image: url("img/services_img.jpg");
-            background: linear-gradient(
-                transparentize($client-green, $gradient-transparency) 0%,
-                transparentize($client-green, $gradient-transparency) 100%
-                ), url('img/lukas-blazek-367945.jpg') center center no-repeat;
-            background-size: cover;
-            background-repeat: no-repeat;
-            width: 100vw;
-            height: 25em;
+                ), url('img/capitol-standard-101748.jpg');
         }
 
         .services {
-            margin-top: 150px;
+            @extend .front-section;
+            margin: $section-padding 0;
+
+            background-image: linear-gradient(
+                transparentize($client-green, $gradient-transparency) 0%,
+                transparentize($client-green, $gradient-transparency) 100%
+                ), url('img/lukas-blazek-367945.jpg');
 
             .text_block {
-                position: absolute;
-                // top:230%;
-                top: 103em;
-                left: 15%;
-                padding: 20px;
-                box-shadow: -1px 2px 2px rgba(95,75,139,.7);
-                width: 70%;
-                @media (max-width: 768px) {
-                    top: 15%;
-                }
+                text-align: center;
+                width: 100%;
             }
 
             .sub_services {
@@ -180,9 +169,7 @@ $gradient-transparency: 0.27;
 
         .text_block {
             background-color: $clr-white;
-            width: 50%;
             @media (max-width: 768px) {
-                width: 85%;
             }
 
             .title {
@@ -197,16 +184,11 @@ $gradient-transparency: 0.27;
             }
 
             .para {
-                margin-top: -10px;
                 font-size: 12px;
                 color: $clr-gray-40;
                 line-height: 20px;
             }
         }
-    }
-    // example
-    @include media($desktop) {
-        text-align: center;
     }
 
     h1,

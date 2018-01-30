@@ -1,6 +1,4 @@
 .corporate_partners {
-  padding: 1.5em;
-
   h2 {
     margin-top: 0;
     text-align: center; //Aligns "Our Corporate Partners"
@@ -15,7 +13,7 @@
   }
 
   .corporate_partner_logo {
-    SVG {
+    svg {
       // Handles Corporate Partner SVG Logos
       margin: 0.5em;
       width: 6em;
