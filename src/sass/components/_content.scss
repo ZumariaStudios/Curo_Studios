@@ -181,7 +181,7 @@ $section-padding: 2.0em;
             }
         }
 
-        ..more {
+        .more {
 
           @mixin servicesImage($imagePath){
             background-image: linear-gradient(
