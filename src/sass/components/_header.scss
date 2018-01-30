@@ -16,7 +16,11 @@ header {
     .logo {
         color: $clr-ultra-violet;
         flex: 1;
-        font-size: 22px;
+        padding: 0.5em;
+        svg {
+            height: 64px;
+            width: 200px;
+        }
     }
 
     .in_touch {
