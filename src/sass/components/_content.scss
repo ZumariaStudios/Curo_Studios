@@ -152,29 +152,32 @@ $section-padding: 2.0em;
             }
 
             .sub_services {
-                // max-width: $desktop-width;
-                margin-top: -10px;
                 line-height: 20px;
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: center;
 
-                .serv_small_txt {
+                .sub_service_link {
                     background-color: $clr-ultra-violet;
+                    flex: 1;
+                    margin: 1.0em;
                     padding: 15px;
-                    height: 220px;
-                    width: 220px;
-                    margin: 5px;
+                    text-decoration: none;
+                    width: 512px;
+
+                    &:hover {
+                        background-color: lighten($clr-ultra-violet, 10%);
+                    }
                 }
 
                 .serv_title {
                     color: $clr-pure-white;
-                    font-size: 18px;
+                    font-size: 20px;
                 }
 
                 .serv_para {
-                    font-size: 12px;
+                    font-size: 14px;
                     color: $clr-pure-white;
                 }
             }
