@@ -40,22 +40,64 @@ $section-padding: 2.0em;
     .main_content {
         font-family: $sanserif;
         width: 100%;
+        @mixin topImage($imagePath){
+          background-image: linear-gradient(
+              120deg,
+              transparentize($clr-ultra-violet, $gradient-transparency) 0%,
+              transparentize($clr-ultra-violet, $gradient-transparency) 33%,
+              transparentize($client-green, $gradient-transparency) 33%,
+              transparentize($client-green, $gradient-transparency) 50%,
+              rgba(0, 0, 0, 0) 50%,
+              rgba(0, 0, 0, 0) 100%),
+              url($imagePath);
+        }
 
         .top_img {
+
+          .tag {
+            display:flex;
+            position: absolute;
+            top: 3%;
+
+            span {
+              color: #ffffff;
+              font-size: 1.7rem;
+              line-height: 30px;
+              padding: 30px;
+              text-transform: uppercase;
+              text-shadow: 1px 1px 3px $clr-ultra-violet;
+            }
+
+            @include media($tablet) {
+              top: 5%;
+              span {
+                flex-direction: row-reverse;
+                margin: auto 10% auto 10%;
+                text-align: center;
+              }
+            }
+
+            @include media($desktop) {
+              top: 7%;
+              span {
+                flex-direction: row-reverse;
+                margin-left: 50%;
+                text-align: left;
+              }
+            }
+          }
+
+            @include topImage('img/top_image_small.jpg');
             background-color: $clr-ultra-violet;
-            background: linear-gradient(
-                120deg,
-                transparentize($clr-ultra-violet, $gradient-transparency) 0%,
-                transparentize($clr-ultra-violet, $gradient-transparency) 33%,
-                transparentize($client-green, $gradient-transparency) 33%,
-                transparentize($client-green, $gradient-transparency) 50%,
-                rgba(0, 0, 0, 0) 50%,
-                rgba(0, 0, 0, 0) 100%),
-                url('img/nastuh-abootalebi-284882.jpg') center center no-repeat;
             background-size: cover;
             background-repeat: no-repeat;
+            background-position: center center;
             width: 100vw;
             height: 350px;
+
+            @include media($desktop) {
+                  @include topImage('img/top_image.jpg');
+            }
         }
 
         .nav_icons {
@@ -102,35 +144,58 @@ $section-padding: 2.0em;
             @extend .front-section;
             margin-top: 0;
 
+          @mixin aboutImage($imagePath) {
             background-image: linear-gradient(
                 to bottom,
                 transparentize(darken($clr-ultra-violet, 20%), $gradient-transparency) 0%,
                 transparentize(darken($clr-ultra-violet, 20%), $gradient-transparency) 100%
-                ), url('img/rawpixel-com-196464.jpg');
+                ), url($imagePath);
+          }
+          @extend .front-section;
+          @include aboutImage('img/about_image_small.jpg');
+
+          @include media($desktop) {
+              @include aboutImage('img/about_image.jpg');
+          }
+
         }
 
         .studio {
-            @extend .front-section;
-            display: flex;
-            flex-direction: row-reverse;
-
+          @mixin missionImage($imagePath){
             background-image: linear-gradient(
                 120deg,
                 rgba(0, 0, 0, 0) 0%,
                 rgba(0, 0, 0, 0) 66%,
                 transparentize($client-green, $gradient-transparency) 66%,
                 transparentize($client-green, $gradient-transparency) 100%
-                ), url('img/capitol-standard-101748.jpg');
+                ), url($imagePath);
+          }
+            @extend .front-section;
+            display: flex;
+            flex-direction: row-reverse;
+
+            @include missionImage('img/mission_image_small.jpg')
+
+            @include media($desktop) {
+                @include missionImage('img/mission_image.jpg');
+            }
         }
 
-        .more {
-            @extend .front-section;
-            margin: $section-padding 0;
+        ..more {
 
+          @mixin servicesImage($imagePath){
             background-image: linear-gradient(
                 transparentize($client-green, $gradient-transparency) 0%,
                 transparentize($client-green, $gradient-transparency) 100%
-                ), url('img/lukas-blazek-367945.jpg');
+                ), url($imagePath);
+          }
+            @extend .front-section;
+            margin: $section-padding 0;
+            @include servicesImage('img/services_image_small.jpg');
+
+            @include media($desktop) {
+                @include servicesImage('img/services_image.jpg');
+            }
 
             .text_block {
                 text-align: center;
