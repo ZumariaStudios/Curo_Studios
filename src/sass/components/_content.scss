@@ -59,62 +59,48 @@ $section-padding: 2.0em;
         }
 
         .nav_icons {
-            display: flex;
+            display: block;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
-            padding: $section-padding;
-            padding-bottom: 0;
+            padding: 0;
 
-            .icon {
+            @include media($tablet) {
                 display: block;
-                margin: 0.5em;
+            }
+            @include media($desktop) {
+                display: flex;
+            }
+
+            a {
+                color: $clr-ultra-violet;
+                display: block;
+                font-family: $fontstack-headings;
+                font-size: 16px;
+                font-weight: bold;
+                margin: 1.0em 0.5em;
                 text-align: center;
                 text-decoration: none;
 
-                @include media($tablet) {
-                    margin: 1.0em;
+                &:hover {
+                    color: lighten($clr-ultra-violet, 10%);
                 }
-
-                @include media($desktop) {
-                    margin: 2.5em;
-                }
-
-                $icon-size: 32px;
-                svg {
-                    height: $icon-size;
-                    width: $icon-size;
-
-                    @include media($tablet) {
-                        height: $icon-size * 2;
-                        width: $icon-size * 2;
-                    }
-
-                    @include media($desktop) {
-                        height: $icon-size * 3;
-                        width: $icon-size * 3;
-                    }
-                }
-            }
-
-            .icon_text {
-                color: $clr-ultra-violet;
-                font-size: 16px;
-                margin: 0;
-                text-align: center;
 
                 @include media($tablet) {
                     font-size: 20px;
+                    margin: 1.5em 1.0em;
                 }
 
                 @include media($desktop) {
                     font-size: 24px;
+                    margin: 1.5em 2.5em;
                 }
             }
         }
 
-        .about {
+        .access {
             @extend .front-section;
+            margin-top: 0;
 
             background-image: linear-gradient(
                 to bottom,
@@ -123,7 +109,7 @@ $section-padding: 2.0em;
                 ), url('img/rawpixel-com-196464.jpg');
         }
 
-        .mission {
+        .studio {
             @extend .front-section;
             display: flex;
             flex-direction: row-reverse;
@@ -137,7 +123,7 @@ $section-padding: 2.0em;
                 ), url('img/capitol-standard-101748.jpg');
         }
 
-        .services {
+        .more {
             @extend .front-section;
             margin: $section-padding 0;
 
@@ -151,34 +137,35 @@ $section-padding: 2.0em;
                 width: 100%;
             }
 
-            .sub_services {
-                line-height: 20px;
+            .more_links {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: center;
 
-                .sub_service_link {
+                a {
                     background-color: $clr-ultra-violet;
                     flex: 1;
                     margin: 1.0em;
-                    padding: 15px;
+                    max-width: 512px;
+                    min-width: 300px;
+                    padding: 2.0em;
                     text-decoration: none;
                     width: 512px;
 
                     &:hover {
                         background-color: lighten($clr-ultra-violet, 10%);
                     }
-                }
 
-                .serv_title {
-                    color: $clr-pure-white;
-                    font-size: 20px;
-                }
+                    h5 {
+                        color: $clr-pure-white;
+                        font-size: 22px;
+                    }
 
-                .serv_para {
-                    font-size: 14px;
-                    color: $clr-pure-white;
+                    p {
+                        font-size: 14px;
+                        color: $clr-pure-white;
+                    }
                 }
             }
         }
@@ -188,19 +175,19 @@ $section-padding: 2.0em;
             @media (max-width: 768px) {
             }
 
-            .title {
+            h3 {
                 color: $clr-ultra-violet;
                 font-size: 32px;
             }
 
-            .subtitle {
+            h5 {
                 margin-top: -20px;
-                font-size: 16px;
+                font-size: 20px;
                 color: $clr-ultra-violet;
             }
 
-            .para {
-                font-size: 12px;
+            p {
+                font-size: 16px;
                 color: $clr-gray-40;
                 line-height: 20px;
             }
